@@ -10,7 +10,8 @@
       ],
       "plugins": ["import"],
       "parserOptions": {
-        "project": ["tsconfig.(app|spec).json"]
+        "project": ["tsconfig.(app|spec).json"],
+        "createDefaultProgram": true
       },
       "extends": [
         "eslint:recommended",

@@ -7,11 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "eslint . --ext .ts"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "ng lint"
+      "pre-commit": "npm run lint"
     }
   },
   "lint-staged": {
