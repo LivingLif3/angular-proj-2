@@ -11,7 +11,11 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,ts}": "npm run lint"
+    "*.{js,ts}": [
+      "prettier",
+      "npm run lint"
+    ],
+    "*.{css,scss}": "prettier"
   },
   "private": true,
   "dependencies": {
