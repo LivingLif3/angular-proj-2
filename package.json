@@ -11,7 +11,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src": "npm run lint"
+    "src/**": "npm run lint"
   },
   "private": true,
   "dependencies": {
