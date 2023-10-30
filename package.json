@@ -12,10 +12,10 @@
   },
   "lint-staged": {
     "*.{js,ts}": [
-      "prettier",
+      "prettier --write",
       "npm run lint"
     ],
-    "*.{css,scss}": "prettier"
+    "*.{css,scss}": "prettier --write"
   },
   "private": true,
   "dependencies": {
