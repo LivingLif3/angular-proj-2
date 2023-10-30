@@ -15,7 +15,7 @@
     }
   },
   "lint-staged": {
-    "*.ts": ["npm run lint", "git add"]
+    "*.ts": ["ng lint", "git add"]
   },
   "private": true,
   "dependencies": {
