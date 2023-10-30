@@ -11,7 +11,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/*.{ts}": [
+    "src/*.ts": [
       "npm run lint",
       "git add"
     ]
