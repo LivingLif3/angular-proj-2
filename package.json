@@ -9,13 +9,11 @@
     "test": "ng test",
     "lint": "eslint . --ext .ts"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
   "lint-staged": {
-    "*.ts": ["ng lint", "git add"]
+    "*.ts": [
+      "ng lint",
+      "git add"
+    ]
   },
   "private": true,
   "dependencies": {
