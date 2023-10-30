@@ -11,10 +11,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/*.ts": [
-      "npm run lint",
-      "git add"
-    ]
+    "*.{ts,js}": "npm run lint"
   },
   "private": true,
   "dependencies": {
