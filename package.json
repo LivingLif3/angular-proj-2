@@ -15,7 +15,7 @@
       "prettier --write",
       "npm run lint"
     ],
-    "*.{css,scss}": "prettier --write"
+    "*.{css,scss,html}": "prettier --write"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +40,8 @@
     "@angular-eslint/template-parser": "16.2.0",
     "@angular/cli": "~16.1.7",
     "@angular/compiler-cli": "^16.1.0",
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
     "@types/jasmine": "~4.3.0",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
