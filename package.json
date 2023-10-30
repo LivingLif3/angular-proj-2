@@ -11,13 +11,10 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.ts": [
+    "src/*.{ts}": [
       "npm run lint",
       "git add"
     ]
-  },
-  "hooks": {
-    "pre-commit": "lint-staged"
   },
   "private": true,
   "dependencies": {
