@@ -9,6 +9,11 @@
     "test": "ng test",
     "lint": "ng lint"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "ng lint"
+    }
+  },
   "lint-staged": {
     "*.ts": ["ng lint", "git add"]
   },
