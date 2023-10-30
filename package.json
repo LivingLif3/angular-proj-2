@@ -11,7 +11,7 @@
   },
   "lint-staged": {
     "*.ts": [
-      "ng lint",
+      "npm run lint",
       "git add"
     ]
   },
