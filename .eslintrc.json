@@ -4,7 +4,7 @@
   "overrides": [
     {
       "files": ["*.ts"],
-      "plugins": ["import"],
+      "plugins": ["unused-imports", "import"],
       "parserOptions": {
         "project": ["tsconfig.(app|spec).json"],
         "createDefaultProgram": true
@@ -20,6 +20,7 @@
         "plugin:prettier/recommended"
       ],
       "rules": {
+        "@typescript-eslint/lines-between-class-members": "off",
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -34,6 +35,36 @@
             "type": "element",
             "prefix": "app",
             "style": "kebab-case"
+          }
+        ],
+        "unused-imports/no-unused-imports": "warn",
+        "unused-imports/no-unused-vars": [
+          "warn",
+          {
+            "vars": "all",
+            "varsIgnorePattern": "^_",
+            "args": "after-used",
+            "argsIgnorePattern": "^_"
+          }
+        ],
+        "sort-imports": [
+          "warn",
+          {
+            "ignoreDeclarationSort": true
+          }
+        ],
+        "import/extensions": "off",
+        "import/no-cycle": "warn",
+        //Eslint imports alphabetical sort
+        "import/order": [
+          "warn",
+          {
+            "alphabetize": {
+              "caseInsensitive": true,
+              "order": "asc"
+            },
+            "groups": [["builtin", "external"], "internal", "parent", "sibling", "index"],
+            "newlines-between": "always"
           }
         ]
       }
