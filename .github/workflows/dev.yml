@@ -1,11 +1,11 @@
-name: building, testing master
+name: building, testing dev
 on:
   push:
     branches:
-      - master
+      - dev
   pull_request:
     branches:
-      - master
+      - dev
 jobs:
   pipeline:
     runs-on: ubuntu-latest
