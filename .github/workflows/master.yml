@@ -28,11 +28,11 @@ jobs:
         run: npm run test -- --watch=false --browsers=ChromeHeadless
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
-      - name: deploy firebase
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
           projectId: angular-project2-406c1
           channelId: live
+      - name: deploy firebase
         if: always()
         run: firebase deploy
