@@ -25,7 +25,7 @@ jobs:
         run: npm run build
       - name: test project
         if: always()
-        run: npm run test
+        run: npm run test -- --watch=false --browsers=ChromeHeadless
       - name: deploy firebase
         if: always()
         run: firebase deploy
