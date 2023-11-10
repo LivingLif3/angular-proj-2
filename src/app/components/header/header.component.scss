@@ -1,0 +1,65 @@
+.header {
+  height: 6.5rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .links {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .link {
+      text-decoration: none;
+      color: black;
+      margin-right: 40px;
+      font-weight: bold;
+    }
+  }
+
+  .icons {
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    .icon {
+      height: auto;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+
+      margin-right: 25px;
+
+      .badge {
+        margin-right: 40px;
+      }
+
+      .icon-wrapper {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background-color: rgba(232, 232, 232, 0.4);
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5px;
+
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.change-language:hover {
+  cursor: pointer;
+}
+
+.select {
+  width: 200px;
+}

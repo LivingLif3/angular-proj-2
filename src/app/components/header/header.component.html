@@ -1,0 +1,55 @@
+<div class="header">
+  <div class="links">
+    <a class="link" [@scroll-animation-color]="stateLink" routerLink="/home">Home page</a>
+    <a class="link" [@scroll-animation-color]="stateLink" routerLink="/products">Product list</a>
+    <span class="link change-language" [@scroll-animation-color]="stateLink" (click)="showModal()"
+      >Profile</span
+    >
+  </div>
+  <div class="icons">
+    <div class="icon" [@scroll-animation-color]="stateLink">
+      <div class="icon-wrapper">
+        <span nz-icon nzType="user" nzTheme="outline"></span>
+      </div>
+      <span>My account</span>
+    </div>
+    <div class="icon" [@scroll-animation-color]="stateLink">
+      <div class="icon-wrapper">
+        <span nz-icon nzType="heart" nzTheme="outline"></span>
+      </div>
+    </div>
+
+    <div class="icon">
+      <nz-badge
+        [nzCount]="1"
+        [nzOffset]="[-15, 5]"
+        class="badge"
+        [@scroll-animation-color]="stateLink"
+      >
+        <div class="icon-wrapper">
+          <span nz-icon nzType="shopping-cart" nzTheme="outline"></span>
+        </div>
+      </nz-badge>
+    </div>
+  </div>
+</div>
+<nz-modal
+  [(nzVisible)]="modalVisible"
+  nzTitle="Change language"
+  (nzOnCancel)="handleCancel()"
+  (nzOnOk)="handleOk()"
+>
+  <ng-container *nzModalContent>
+    <nz-select
+      class="select"
+      nzShowSearch
+      nzAllowClear
+      nzPlaceHolder="Select a language"
+      [(ngModel)]="selectedValue"
+    >
+      <nz-option nzLabel="English" nzValue="eng"></nz-option>
+      <nz-option nzLabel="Русский" nzValue="rus"></nz-option>
+      <nz-option nzLabel="Deutschland" nzValue="ger"></nz-option>
+    </nz-select>
+  </ng-container>
+</nz-modal>
