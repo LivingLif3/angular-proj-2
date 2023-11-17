@@ -7,6 +7,8 @@ import {
   HostListener,
 } from '@angular/core';
 
+import { LanguageService } from '../../core/services/LanguageService/language.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -71,7 +73,10 @@ export class HeaderComponent {
     }
   }
 
-  constructor(private el: ElementRef) {}
+  constructor(
+    private el: ElementRef,
+    private languageService: LanguageService,
+  ) {}
 
   showModal(): void {
     this.modalVisible = true;
@@ -82,6 +87,7 @@ export class HeaderComponent {
   }
 
   handleOk(): void {
+    this.languageService.setCurrentLanguage(this.selectedValue);
     this.modalVisible = false;
   }
 }

@@ -1,17 +1,20 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { LanguageService } from './core/services/LanguageService/language.service';
 
 describe('AppComponent', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, NzBadgeModule, NzModalModule],
+      imports: [RouterTestingModule, NzBadgeModule, NzModalModule, TranslateModule.forRoot()],
       declarations: [AppComponent, HeaderComponent, FooterComponent],
+      providers: [LanguageService, TranslateService],
     }),
   );
 

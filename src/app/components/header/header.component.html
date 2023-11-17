@@ -1,15 +1,15 @@
 <div class="header">
   <div class="links hidden" [@scroll-animation-color]="stateLink">
-    <a class="link" routerLink="/home">Home page</a>
-    <a class="link" routerLink="/products">Product list</a>
-    <span class="link change-language" (click)="showModal()">Profile</span>
+    <a class="link" routerLink="/home">{{ 'Home page' | translate }}</a>
+    <a class="link" routerLink="/products">{{ 'Product list' | translate }}</a>
+    <span class="link change-language" (click)="showModal()">{{ 'Profile' | translate }}</span>
   </div>
   <div class="icons" [@scroll-animation-color]="stateLink">
     <div class="icon hidden">
       <div class="icon-wrapper">
         <span nz-icon nzType="user" nzTheme="outline"></span>
       </div>
-      <span>My account</span>
+      <span>{{ 'My account' | translate }}</span>
     </div>
     <div class="icon hidden">
       <div class="icon-wrapper">
@@ -48,9 +48,9 @@
       nzPlaceHolder="Select a language"
       [(ngModel)]="selectedValue"
     >
-      <nz-option nzLabel="English" nzValue="eng"></nz-option>
-      <nz-option nzLabel="Русский" nzValue="rus"></nz-option>
-      <nz-option nzLabel="Deutschland" nzValue="ger"></nz-option>
+      <nz-option nzLabel="English" nzValue="en"></nz-option>
+      <nz-option nzLabel="Русский" nzValue="ru"></nz-option>
+      <nz-option nzLabel="Deutschland" nzValue="de"></nz-option>
     </nz-select>
   </ng-container>
 </nz-modal>
