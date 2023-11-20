@@ -6,4 +6,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./choose-size.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ChooseSizeComponent {}
+export class ChooseSizeComponent {
+  sizes: string[] = ['XL', 'L', 'M', 'S'];
+}

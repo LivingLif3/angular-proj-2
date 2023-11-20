@@ -1,6 +1,8 @@
 {
-  "Profile": "Profile",
-  "Product list": "Product list",
-  "Home page": "Home page",
-  "My account": "My account"
+  "HEADER": {
+    "PROFILE": "Profile",
+    "PRODUCT_LIST": "Product list",
+    "HOME_PAGE": "Home page",
+    "MY_ACCOUNT": "My account"
+  }
 }

@@ -3,8 +3,8 @@
     position: relative;
     z-index: -1;
     border-radius: 10px;
-    width: 242px;
-    height: 414px;
+    width: 15.125rem; //242
+    height: 25.875rem; //414
 
     .favorite {
       position: absolute;
@@ -30,25 +30,22 @@
     font-weight: 500;
   }
 
+  $circle-colors: (
+    'blue': #2091f9,
+    'green': #2dc071,
+    'orange': #e77c40,
+    'black': #252b42,
+  );
+
   .choose-colors-wrapper {
     display: flex;
     flex: 1;
     align-items: center;
 
-    .blue {
-      background-color: #2091f9;
-    }
-
-    .green {
-      background-color: #2dc071;
-    }
-
-    .orange {
-      background-color: #e77c40;
-    }
-
-    .black {
-      background-color: #252b42;
+    @each $name, $color in $circle-colors {
+      .#{$name} {
+        background-color: $color;
+      }
     }
 
     .color-element {

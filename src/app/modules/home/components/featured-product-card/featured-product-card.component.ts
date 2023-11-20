@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+import { CardDirective } from '../../../../core/directives/CardDirective/card.directive';
 
 @Component({
   selector: 'app-featured-product-card',
@@ -6,8 +8,6 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   styleUrls: ['./featured-product-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FeaturedProductCardComponent {
-  @Input() imageUrl: string = '';
-  @Input() title: string = '';
-  @Input() cost: string = '';
+export class FeaturedProductCardComponent extends CardDirective {
+  circles: string[] = ['blue', 'green', 'orange', 'black'];
 }

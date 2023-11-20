@@ -1,6 +1,8 @@
 {
-  "Profile": "Профиль",
-  "Product list": "Список товаров",
-  "Home page": "Главная",
-  "My account": "Аккаунт"
+  "HEADER": {
+    "PROFILE": "Профиль",
+    "PRODUCT_LIST": "Список товаров",
+    "HOME_PAGE": "Главная",
+    "MY_ACCOUNT": "Аккаунт"
+  }
 }

@@ -10,10 +10,9 @@
   </div>
   <div class="cost">${{ cost }}</div>
   <div class="choose-colors-wrapper">
-    <div class="color-element blue"></div>
-    <div class="color-element green"></div>
-    <div class="color-element orange"></div>
-    <div class="color-element black"></div>
+    <ng-container *ngFor="let el of circles">
+      <div class="color-element" [ngClass]="el"></div>
+    </ng-container>
   </div>
   <app-choose-size></app-choose-size>
 </div>

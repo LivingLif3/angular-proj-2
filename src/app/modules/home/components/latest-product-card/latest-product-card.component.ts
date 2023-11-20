@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+import { CardDirective } from '../../../../core/directives/CardDirective/card.directive';
 
 @Component({
   selector: 'app-latest-product-card',
@@ -6,8 +8,4 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   styleUrls: ['./latest-product-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LatestProductCardComponent {
-  @Input() imageUrl: string = '';
-  @Input() title: string = '';
-  @Input() cost: string = '';
-}
+export class LatestProductCardComponent extends CardDirective {}

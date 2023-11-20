@@ -1,6 +1,9 @@
 <div class="choose-size-wrapper">
-  <div class="size-element">XL</div>
-  <div class="size-element">L</div>
-  <div class="size-element">M</div>
-  <div class="size-element">S</div>
+  <ng-container *ngFor="let i of sizes">
+    <div class="size-element">{{ i }}</div>
+  </ng-container>
+  <!--  <div class="size-element">XL</div>-->
+  <!--  <div class="size-element">L</div>-->
+  <!--  <div class="size-element">M</div>-->
+  <!--  <div class="size-element">S</div>-->
 </div>

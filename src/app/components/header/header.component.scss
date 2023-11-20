@@ -6,7 +6,7 @@
   justify-content: center;
 
   .links {
-    flex: 1;
+    flex: 2;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -24,11 +24,11 @@
   }
 
   .icons {
-    width: 40%;
     height: 100%;
 
     display: flex;
     align-items: center;
+    flex: 1;
 
     .icon {
       height: auto;
@@ -43,7 +43,7 @@
       }
 
       .icon-wrapper {
-        width: 3.5rem;
+        min-width: 3.5rem;
         height: 3.5rem;
         border-radius: 50%;
         background-color: rgba(232, 232, 232, 0.4);
@@ -80,6 +80,7 @@
 
     .icons {
       display: flex;
+      justify-content: right;
       .badge {
         font-size: 7px;
       }
@@ -102,12 +103,13 @@
 
     .icons {
       display: flex;
-
+      justify-content: right;
       .hidden {
         display: none;
       }
       .burger-menu {
         display: block;
+        margin-right: 2rem;
       }
     }
   }
@@ -117,12 +119,11 @@
   .header {
     .links {
       .link {
-        margin-right: 1.5rem;
+        margin-right: 1rem;
       }
     }
 
     .icons {
-      width: 60%;
       display: flex;
       justify-content: center;
 
@@ -134,11 +135,6 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .header {
-    .icons {
-      width: 50%;
-    }
-  }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {

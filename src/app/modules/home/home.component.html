@@ -14,27 +14,15 @@
 </div>
 <div class="desktop-content">
   <div class="sections-wrapper">
-    <div class="section">
-      <div class="hat centralize">
-        <app-button>HAT</app-button>
+    <ng-container *ngFor="let section of sections">
+      <div class="section">
+        <ng-container *ngFor="let el of section">
+          <div [ngClass]="[el.className, 'centralize']">
+            <app-button>{{ el.title }}</app-button>
+          </div>
+        </ng-container>
       </div>
-      <div class="shoes centralize">
-        <app-button>SHOES</app-button>
-      </div>
-    </div>
-    <div class="section">
-      <div class="flowers centralize">
-        <app-button>DRESSES</app-button>
-      </div>
-    </div>
-    <div class="section">
-      <div class="bags centralize">
-        <app-button>BAGS</app-button>
-      </div>
-      <div class="clothes centralize">
-        <app-button>CLOTHES</app-button>
-      </div>
-    </div>
+    </ng-container>
   </div>
 </div>
 <div class="divider-wrapper">
@@ -53,30 +41,14 @@
   </div>
   <div class="content-wrapper">
     <div class="content">
-      <app-featured-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/woman_in_red.png'"
-        class="card"
-      ></app-featured-product-card>
-      <app-featured-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/white_woman.png'"
-        class="card"
-      ></app-featured-product-card>
-      <app-featured-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/woman_with_orange_hair.png'"
-        class="card"
-      ></app-featured-product-card>
-      <app-featured-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/woman_in_red.png'"
-        class="card"
-      ></app-featured-product-card>
+      <ng-container *ngFor="let card of featuredCards">
+        <app-featured-product-card
+          [title]="card.title"
+          [cost]="card.cost"
+          [imageUrl]="card.imageUrl"
+          class="card"
+        ></app-featured-product-card>
+      </ng-container>
     </div>
   </div>
 </div>
@@ -86,54 +58,14 @@
   </div>
   <div class="content-wrapper">
     <div class="content">
-      <app-latest-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/woman_in_red.png'"
-        class="small-card"
-      ></app-latest-product-card>
-      <app-latest-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/woman_in_red.png'"
-        class="small-card"
-      ></app-latest-product-card>
-      <app-latest-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/woman_in_red.png'"
-        class="small-card"
-      ></app-latest-product-card>
-      <app-latest-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/woman_in_red.png'"
-        class="small-card"
-      ></app-latest-product-card>
-      <app-latest-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/woman_in_red.png'"
-        class="small-card"
-      ></app-latest-product-card>
-      <app-latest-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/woman_in_red.png'"
-        class="small-card"
-      ></app-latest-product-card>
-      <app-latest-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/woman_in_red.png'"
-        class="small-card"
-      ></app-latest-product-card>
-      <app-latest-product-card
-        [title]="'Mens Essential Tee'"
-        [cost]="'32.00'"
-        [imageUrl]="'../../../assets/woman_in_red.png'"
-        class="small-card"
-      ></app-latest-product-card>
+      <ng-container *ngFor="let card of cards">
+        <app-latest-product-card
+          [title]="card.title"
+          [cost]="card.cost"
+          [imageUrl]="card.imageUrl"
+          class="small-card"
+        ></app-latest-product-card>
+      </ng-container>
     </div>
   </div>
 </div>
