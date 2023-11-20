@@ -7,14 +7,23 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CardConstant } from './core/constants/card.constant';
 import { LanguageService } from './core/services/LanguageService/language.service';
+import { CARDS } from './modules/home/home.module';
 
 describe('AppComponent', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, NzBadgeModule, NzModalModule, TranslateModule.forRoot()],
       declarations: [AppComponent, HeaderComponent, FooterComponent],
-      providers: [LanguageService, TranslateService],
+      providers: [
+        LanguageService,
+        TranslateService,
+        {
+          provide: CARDS,
+          useValue: CardConstant,
+        },
+      ],
     }),
   );
 
