@@ -1,19 +1,19 @@
 <div class="header">
-  <div class="links">
-    <a class="link" [@scroll-animation-color]="stateLink" routerLink="/home">Home page</a>
-    <a class="link" [@scroll-animation-color]="stateLink" routerLink="/products">Product list</a>
-    <span class="link change-language" [@scroll-animation-color]="stateLink" (click)="showModal()"
-      >Profile</span
-    >
+  <div class="links hidden" [@scroll-animation-color]="stateLink">
+    <a class="link" routerLink="/home">{{ 'HEADER.HOME_PAGE' | translate }}</a>
+    <a class="link" routerLink="/products">{{ 'HEADER.PRODUCT_LIST' | translate }}</a>
+    <span class="link change-language" (click)="showModal()">{{
+      'HEADER.PROFILE' | translate
+    }}</span>
   </div>
-  <div class="icons">
-    <div class="icon" [@scroll-animation-color]="stateLink">
+  <div class="icons" [@scroll-animation-color]="stateLink">
+    <div class="icon hidden">
       <div class="icon-wrapper">
         <span nz-icon nzType="user" nzTheme="outline"></span>
       </div>
-      <span>My account</span>
+      <span>{{ 'HEADER.MY_ACCOUNT' | translate }}</span>
     </div>
-    <div class="icon" [@scroll-animation-color]="stateLink">
+    <div class="icon hidden">
       <div class="icon-wrapper">
         <span nz-icon nzType="heart" nzTheme="outline"></span>
       </div>
@@ -31,6 +31,9 @@
         </div>
       </nz-badge>
     </div>
+    <div class="burger-menu">
+      <span nz-icon nzType="menu" nzTheme="outline"></span>
+    </div>
   </div>
 </div>
 <nz-modal
@@ -47,9 +50,9 @@
       nzPlaceHolder="Select a language"
       [(ngModel)]="selectedValue"
     >
-      <nz-option nzLabel="English" nzValue="eng"></nz-option>
-      <nz-option nzLabel="Русский" nzValue="rus"></nz-option>
-      <nz-option nzLabel="Deutschland" nzValue="ger"></nz-option>
+      <nz-option nzLabel="English" nzValue="en"></nz-option>
+      <nz-option nzLabel="Русский" nzValue="ru"></nz-option>
+      <nz-option nzLabel="Deutschland" nzValue="de"></nz-option>
     </nz-select>
   </ng-container>
 </nz-modal>
