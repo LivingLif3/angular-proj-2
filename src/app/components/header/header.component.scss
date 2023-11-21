@@ -1,0 +1,141 @@
+.header {
+  height: 6.5rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .links {
+    flex: 2;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+      transition: none;
+      margin-right: 2.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .icons {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    .icon {
+      height: auto;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+
+      margin-right: 1.5rem;
+
+      .badge {
+        margin-right: 2.5rem;
+      }
+
+      .icon-wrapper {
+        min-width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background-color: rgba(232, 232, 232, 0.4);
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.25rem;
+
+        font-size: 1.25rem;
+      }
+    }
+
+    .burger-menu {
+      display: none;
+    }
+  }
+}
+
+.change-language:hover {
+  cursor: pointer;
+}
+
+.select {
+  width: 12.5rem;
+}
+
+@media only screen and (max-width: 320px) {
+  .header {
+    justify-content: right;
+    .hidden {
+      display: none;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: right;
+      .badge {
+        font-size: 7px;
+      }
+      .hidden {
+        display: none;
+      }
+      .burger-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .header {
+    justify-content: right;
+    .hidden {
+      display: none;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: right;
+      .hidden {
+        display: none;
+      }
+      .burger-menu {
+        display: block;
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .header {
+    .links {
+      .link {
+        margin-right: 1rem;
+      }
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+
+      .icon {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}

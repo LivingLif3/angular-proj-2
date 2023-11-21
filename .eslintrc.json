@@ -6,7 +6,7 @@
       "files": ["*.ts"],
       "plugins": ["unused-imports", "import"],
       "parserOptions": {
-        "project": ["tsconfig.(app|spec).json"],
+        "project": ["tsconfig.(app|spec).json", "tsconfig.json"],
         "createDefaultProgram": true
       },
       "extends": [

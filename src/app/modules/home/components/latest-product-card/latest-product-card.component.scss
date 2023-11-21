@@ -1,0 +1,29 @@
+.card {
+  .photo {
+    position: relative;
+    z-index: -1;
+    width: 240px;
+    height: 180px;
+
+    .favorite {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+  }
+
+  .text-wrapper {
+    .title {
+      color: #252b42;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      color: #bdbdbd;
+    }
+  }
+
+  .cost {
+    font-weight: bold;
+  }
+}

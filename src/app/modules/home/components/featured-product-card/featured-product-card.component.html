@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="photo" [style.background-image]="'url(' + imageUrl + ')'">
+    <app-favorite class="favorite"></app-favorite>
+  </div>
+  <div class="text-wrapper">
+    <div class="title">
+      {{ title }}
+    </div>
+    <div class="subtitle">(Black)</div>
+  </div>
+  <div class="cost">${{ cost }}</div>
+  <div class="choose-colors-wrapper">
+    <ng-container *ngFor="let el of circles">
+      <div class="color-element" [ngClass]="el"></div>
+    </ng-container>
+  </div>
+  <app-choose-size></app-choose-size>
+</div>

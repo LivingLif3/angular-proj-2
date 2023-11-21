@@ -1,0 +1,62 @@
+.card {
+  .photo {
+    position: relative;
+    z-index: -1;
+    border-radius: 10px;
+    width: 15.125rem; //242
+    height: 25.875rem; //414
+
+    .favorite {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+  }
+
+  .text-wrapper {
+    font-size: 1.25rem;
+
+    .title {
+      color: #252b42;
+    }
+
+    .subtitle {
+      color: #bdbdbd;
+    }
+  }
+
+  .cost {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  $circle-colors: (
+    'blue': #2091f9,
+    'green': #2dc071,
+    'orange': #e77c40,
+    'black': #252b42,
+  );
+
+  .choose-colors-wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    @each $name, $color in $circle-colors {
+      .#{$name} {
+        background-color: $color;
+      }
+    }
+
+    .color-element {
+      border: 2px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+      width: 1.875rem;
+      height: 1.875rem;
+
+      margin-right: 0.5rem;
+    }
+  }
+}

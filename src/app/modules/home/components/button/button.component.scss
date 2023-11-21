@@ -1,0 +1,16 @@
+.button {
+  border: 1px solid white;
+  outline: none;
+
+  color: white;
+  font-weight: bold;
+
+  height: 2.5rem;
+  min-width: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}

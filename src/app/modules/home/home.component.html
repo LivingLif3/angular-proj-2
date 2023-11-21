@@ -1,0 +1,71 @@
+<div class="main-image">
+  <div class="text-wrapper">
+    <div class="text-header">
+      <h3>SUMMER 2020</h3>
+    </div>
+    <div class="text-body">
+      <h1>New Collection</h1>
+    </div>
+    <div class="text-footer">Find The Perfect style for you</div>
+    <div class="footer-wrapper">
+      <button routerLink="/products" class="button-footer">Shop Now</button>
+    </div>
+  </div>
+</div>
+<div class="desktop-content">
+  <div class="sections-wrapper">
+    <ng-container *ngFor="let section of sections">
+      <div class="section">
+        <ng-container *ngFor="let el of section">
+          <div [ngClass]="[el.className, 'centralize']">
+            <app-button>{{ el.title }}</app-button>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div class="divider-wrapper">
+  <div class="divider"></div>
+</div>
+<div class="featured-products">
+  <div class="title-wrapper">
+    <div class="title">Featured Products</div>
+  </div>
+  <div class="sections-wrapper">
+    <div class="sections">
+      <div class="section active">Featured</div>
+      <div class="section">Best Seller</div>
+      <div class="section">New Arrivals</div>
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <div class="content">
+      <ng-container *ngFor="let card of featuredCards">
+        <app-featured-product-card
+          [title]="card.title"
+          [cost]="card.cost"
+          [imageUrl]="card.imageUrl"
+          class="card"
+        ></app-featured-product-card>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="latest-products">
+  <div class="title-wrapper">
+    <div class="title">Latest Products</div>
+  </div>
+  <div class="content-wrapper">
+    <div class="content">
+      <ng-container *ngFor="let card of cards">
+        <app-latest-product-card
+          [title]="card.title"
+          [cost]="card.cost"
+          [imageUrl]="card.imageUrl"
+          class="small-card"
+        ></app-latest-product-card>
+      </ng-container>
+    </div>
+  </div>
+</div>
