@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HeartOutline } from '@ant-design/icons-angular/icons';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 import { ChooseSizeComponent } from './choose-size.component';
 
@@ -9,6 +11,7 @@ describe('ChooseSizeComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ChooseSizeComponent],
+      imports: [NzIconModule.forRoot([HeartOutline])],
     });
     fixture = TestBed.createComponent(ChooseSizeComponent);
     component = fixture.componentInstance;

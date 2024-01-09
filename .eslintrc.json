@@ -21,6 +21,9 @@
       ],
       "rules": {
         "@typescript-eslint/lines-between-class-members": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/default-param-last": "off",
+        "@typescript-eslint/no-unused-vars": "off",
         "@angular-eslint/directive-selector": [
           "error",
           {

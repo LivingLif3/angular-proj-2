@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 import { FavoriteComponent } from './favorite.component';
 
@@ -9,6 +11,7 @@ describe('FavoriteComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [FavoriteComponent],
+      imports: [NzIconModule, HttpClientModule],
     });
     fixture = TestBed.createComponent(FavoriteComponent);
     component = fixture.componentInstance;

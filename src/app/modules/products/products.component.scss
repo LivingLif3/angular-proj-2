@@ -53,7 +53,124 @@
 }
 .content-wrapper {
   width: 100%;
+  height: auto;
   padding: 2rem;
-
+  background: rgba(249, 249, 249, 1);
   display: flex;
+
+  .main-content-wrapper {
+    width: 100%;
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 2rem;
+      padding-left: 2rem;
+
+      .small-card {
+        display: flex;
+        justify-content: center;
+        flex-basis: calc(25%);
+      }
+    }
+
+    .main-content-inline {
+      display: flex;
+      flex-direction: column;
+      padding-left: 2rem;
+      padding-top: 2rem;
+      width: 100%;
+
+      .inline-card {
+        margin-top: 0.5rem;
+      }
+    }
+
+    .content-block {
+      min-height: 82rem;
+    }
+
+    .content-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .sort-block {
+        .sort-label {
+          font-size: 1rem;
+          line-height: 1rem;
+          color: rgba(115, 115, 115, 1);
+        }
+
+        nz-select {
+          width: 10rem;
+          margin-left: 1.5rem;
+          //padding: 1rem 1.25rem 1rem 1.25rem;
+        }
+      }
+    }
+
+    .orientation-block {
+      display: flex;
+
+      nz-radio-group {
+        display: flex;
+        label {
+          width: 3.2rem;
+          height: 3.2rem;
+          font-size: 1.5rem;
+          border-radius: 5px;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 0.5rem;
+          cursor: pointer;
+
+          &:hover {
+            color: black;
+          }
+
+          &:active {
+            border: none;
+          }
+        }
+      }
+
+      .icon-wrapper {
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+
+      .active {
+        background-color: rgba(233, 233, 233, 1);
+      }
+    }
+  }
+}
+
+.paginator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+  background-color: rgba(249, 249, 249, 1);
 }

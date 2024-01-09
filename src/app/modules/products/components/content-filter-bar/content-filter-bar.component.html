@@ -1,1 +1,55 @@
-<p>content-filter-bar works!</p>
+<div class="filter-wrapper">
+  <div class="filter-content">
+    <form [formGroup]="selectValue">
+      <div class="search-wrapper">
+        <nz-input-group [nzSuffix]="suffixIconSearch">
+          <input type="text" nz-input placeholder="Search for products" formControlName="search" />
+        </nz-input-group>
+        <ng-template #suffixIconSearch>
+          <span nz-icon nzType="search" class="search"></span>
+        </ng-template>
+      </div>
+      <div class="section">
+        <div class="items-list">
+          <ng-container *ngFor="let item of accessories">
+            <app-accessory-item
+              [title]="item.title"
+              [subTitles]="item.subTitles"
+            ></app-accessory-item>
+          </ng-container>
+        </div>
+      </div>
+      <div class="section">
+        <app-custom-select
+          [title]="colors.title"
+          [items]="colors.items"
+          formControlName="selectedColor"
+        ></app-custom-select>
+      </div>
+      <div class="section">
+        <app-custom-select
+          [title]="sizes.title"
+          [items]="sizes.items"
+          formControlName="selectedSize"
+        ></app-custom-select>
+      </div>
+      <div class="section">
+        <div class="title-slider">Filter by price</div>
+        <div class="slider">
+          <nz-slider nzRange formControlName="price" [nzMax]="1000"></nz-slider>
+        </div>
+        <div class="values">
+          <div class="value">{{ selectValue.get('price')?.value[0] }}$</div>
+          <div class="value">{{ selectValue.get('price')?.value[1] }}$</div>
+        </div>
+      </div>
+      <div class="section">
+        <app-custom-checkbox
+          [label]="brands.label"
+          [items]="brands.items"
+          formControlName="brand"
+        ></app-custom-checkbox>
+      </div>
+    </form>
+  </div>
+</div>

@@ -8,6 +8,4 @@ import { CardDirective } from '../../../../core/directives/CardDirective/card.di
   styleUrls: ['./featured-product-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FeaturedProductCardComponent extends CardDirective {
-  circles: string[] = ['blue', 'green', 'orange', 'black'];
-}
+export class FeaturedProductCardComponent extends CardDirective {}

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 import { ProductCardComponent } from './product-card.component';
 
@@ -9,6 +10,7 @@ describe('ProductCardComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ProductCardComponent],
+      imports: [NzIconModule],
     });
     fixture = TestBed.createComponent(ProductCardComponent);
     component = fixture.componentInstance;

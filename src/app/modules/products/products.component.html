@@ -9,4 +9,70 @@
     <div class="text-footer">Find The Perfect style for you</div>
   </div>
 </div>
-<div class="content-wrapper"></div>
+<div class="content-wrapper">
+  <app-content-filter-bar
+    [accessories]="accessories"
+    [colors]="colors"
+    [sizes]="sizes"
+    [brands]="brands"
+    [products]="$any(products$) | async"
+    (productsChange)="check($event)"
+  ></app-content-filter-bar>
+  <div class="main-content-wrapper">
+    <div class="content-header">
+      <form [formGroup]="sortedValueForm">
+        <div class="sort-block">
+          <span class="sort-label">Sort by:</span>
+          <nz-select formControlName="sortedValue">
+            <nz-option nzValue="Popularity" nzLabel="Popularity"></nz-option>
+            <nz-option nzValue="Cost" nzLabel="Cost"></nz-option>
+          </nz-select>
+        </div>
+        <div class="orientation-block">
+          <nz-radio-group formControlName="orientation">
+            <label nz-radio-button [nzValue]="'column'">
+              <span nz-icon nzType="appstore" nzTheme="outline"></span>
+            </label>
+            <label nz-radio-button [nzValue]="'row'">
+              <span nz-icon nzType="bars" nzTheme="outline"></span>
+            </label>
+          </nz-radio-group>
+        </div>
+      </form>
+    </div>
+    <ng-template [ngIf]="sortedValueForm.get('orientation')?.value === 'column'">
+      <div class="main-content content-block">
+        <ng-container *ngFor="let product of currentProducts">
+          <app-latest-product-card
+            [title]="product['title']"
+            [cost]="product['price']"
+            [imageUrl]="product['images'][0]"
+            class="small-card"
+          >
+          </app-latest-product-card>
+        </ng-container>
+      </div>
+    </ng-template>
+    <ng-template [ngIf]="sortedValueForm.get('orientation')?.value === 'row'">
+      <div class="main-content-inline content-block">
+        <ng-container *ngFor="let product of currentProducts">
+          <app-inline-product-card
+            [title]="product['title']"
+            [cost]="product['price']"
+            [imageUrl]="product['images'][0]"
+            class="inline-card"
+          >
+          </app-inline-product-card>
+        </ng-container>
+      </div>
+    </ng-template>
+    <div class="paginator">
+      <nz-pagination
+        [nzPageIndex]="1"
+        (nzPageIndexChange)="onChangePage($event)"
+        [nzPageSize]="itemsPerPage"
+        [nzTotal]="manipulatedProducts?.length"
+      ></nz-pagination>
+    </div>
+  </div>
+</div>

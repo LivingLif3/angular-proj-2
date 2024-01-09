@@ -1,12 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HeartOutline } from '@ant-design/icons-angular/icons';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 import { CardConstant } from '../../core/constants/card.constant';
+import { ChooseColorComponent } from '../../shared/choose-color/choose-color.component';
+import { ChooseSizeComponent } from '../../shared/choose-size/choose-size.component';
+import { FavoriteComponent } from '../../shared/favorite/favorite.component';
+import { LatestProductCardComponent } from '../../shared/latest-product-card/latest-product-card.component';
 
 import { ButtonComponent } from './components/button/button.component';
-import { ChooseSizeComponent } from './components/choose-size/choose-size.component';
-import { FavoriteComponent } from './components/favorite/favorite.component';
 import { FeaturedProductCardComponent } from './components/featured-product-card/featured-product-card.component';
-import { LatestProductCardComponent } from './components/latest-product-card/latest-product-card.component';
 import { HomeComponent } from './home.component';
 import { CARDS } from './home.module';
 
@@ -66,7 +69,9 @@ describe('HomeComponent', () => {
         LatestProductCardComponent,
         FavoriteComponent,
         ChooseSizeComponent,
+        ChooseColorComponent,
       ],
+      imports: [NzIconModule.forRoot([HeartOutline])],
       providers: [
         {
           provide: CARDS,

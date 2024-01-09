@@ -1,15 +1,12 @@
 .card {
   .photo {
-    position: relative;
-    z-index: -1;
-    width: 240px;
-    height: 180px;
-
-    .favorite {
-      position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
-    }
+    width: 15rem;
+    height: 11.25rem;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .text-wrapper {

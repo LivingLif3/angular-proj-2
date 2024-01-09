@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-favorite',
@@ -6,4 +6,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./favorite.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FavoriteComponent {}
+export class FavoriteComponent {
+  @Input() color: string = '#fff';
+}

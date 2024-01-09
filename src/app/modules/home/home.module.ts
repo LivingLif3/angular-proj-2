@@ -5,12 +5,10 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 
 import { CardConstant } from '../../core/constants/card.constant';
+import { SharedModule } from '../../shared/shared.module';
 
 import { ButtonComponent } from './components/button/button.component';
-import { ChooseSizeComponent } from './components/choose-size/choose-size.component';
-import { FavoriteComponent } from './components/favorite/favorite.component';
 import { FeaturedProductCardComponent } from './components/featured-product-card/featured-product-card.component';
-import { LatestProductCardComponent } from './components/latest-product-card/latest-product-card.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { HomeComponent } from './home.component';
 
@@ -28,13 +26,16 @@ export const CARDS = new InjectionToken('cards');
     HomeComponent,
     ButtonComponent,
     FeaturedProductCardComponent,
-    LatestProductCardComponent,
-    ChooseSizeComponent,
-    FavoriteComponent,
     ProductCardComponent,
   ],
   exports: [ButtonComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), NzDividerModule, NzIconModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    NzDividerModule,
+    NzIconModule,
+    SharedModule,
+  ],
   providers: [
     {
       provide: CARDS,

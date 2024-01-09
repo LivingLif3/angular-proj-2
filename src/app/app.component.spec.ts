@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 
 import { AppComponent } from './app.component';
@@ -14,7 +15,13 @@ import { CARDS } from './modules/home/home.module';
 describe('AppComponent', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, NzBadgeModule, NzModalModule, TranslateModule.forRoot()],
+      imports: [
+        RouterTestingModule,
+        NzBadgeModule,
+        NzModalModule,
+        TranslateModule.forRoot(),
+        NzIconModule,
+      ],
       declarations: [AppComponent, HeaderComponent, FooterComponent],
       providers: [
         LanguageService,

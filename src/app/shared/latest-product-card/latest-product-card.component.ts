@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { CardDirective } from '../../../../core/directives/CardDirective/card.directive';
+import { CardDirective } from '../../core/directives/CardDirective/card.directive';
 
 @Component({
   selector: 'app-latest-product-card',

@@ -9,6 +9,9 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { StoreModule } from '@ngrx/store';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
@@ -23,6 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ProductsEffects } from './store/effects/products.effects';
+import { appReducers } from './store/reducers/app.reducers';
 
 registerLocaleData(en);
 
@@ -45,6 +50,9 @@ export function HttpLoaderFactory(http: HttpClient): TranslateLoader {
       },
       useDefaultLang: false,
     }),
+    StoreModule.forRoot(appReducers),
+    EffectsModule.forRoot([ProductsEffects]),
+    StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
     AngularFireAuthModule,
     FormsModule,
     HttpClientModule,
