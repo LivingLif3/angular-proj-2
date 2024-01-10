@@ -3,6 +3,7 @@ export interface IProduct {
   typeOfProduction: string;
   size: string[];
   price: number;
+  popularity: number;
   images: string[];
   colors: string[];
   brand: string;

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Store, select } from '@ngrx/store';
 
 import { IAccessory, ICheckbox, ISelect } from '../../core/types/ContentFilterBarTypes';
+import { IProduct } from '../../core/types/IProduct';
 import { GetProducts } from '../../store/actions/products.actions';
 import { selectProductsList } from '../../store/selectors/products.selectors';
 import { IAppState } from '../../store/state/app.state';
@@ -23,6 +24,11 @@ export class ProductsComponent implements OnInit {
   pageIndex: number = 0;
 
   itemsPerPage: number = 20;
+
+  sortFunctions = {
+    popularity: this.compareFunctionForPopularity,
+    cost: this.compareFunctionForPrice,
+  };
 
   accessories: IAccessory[] = [
     {
@@ -86,9 +92,23 @@ export class ProductsComponent implements OnInit {
     this._store.dispatch(new GetProducts());
 
     this.sortedValueForm = this.fb.group({
-      sortedValue: ['Popularity'],
+      sortedValue: [''],
       orientation: ['column'],
     });
+
+    this.sortedValueForm
+      .get('sortedValue')
+      ?.valueChanges.subscribe((value: 'popularity' | 'cost') => {
+        this.currentProducts.sort(this.sortFunctions[value]);
+      });
+  }
+
+  compareFunctionForPopularity(a: IProduct, b: IProduct) {
+    return a.popularity - b.popularity;
+  }
+
+  compareFunctionForPrice(a: IProduct, b: IProduct) {
+    return a.price - b.price;
   }
 
   check(data: any) {

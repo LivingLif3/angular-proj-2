@@ -6,11 +6,20 @@
   border: 1px solid #dedede;
   box-shadow: 0px 2px 4px 0px #0000001a;
 
+  .inside-img {
+    display: none;
+  }
+
+  .outside-img {
+  }
+
   .image-block {
     width: 17.375rem;
     height: 12rem;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
   }
 
   .info-block {
@@ -51,5 +60,32 @@
         font-weight: 600;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+
+    .inside-img {
+      display: block;
+    }
+
+    .outside-img {
+      display: none;
+    }
+
+    .info-block {
+      width: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .main-image {
+    background-position: -4rem 0;
   }
 }
