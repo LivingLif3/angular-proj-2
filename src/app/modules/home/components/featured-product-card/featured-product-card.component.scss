@@ -1,0 +1,32 @@
+.card {
+  .photo {
+    position: relative;
+    z-index: -1;
+    border-radius: 10px;
+    width: 15.125rem; //242
+    height: 25.875rem; //414
+
+    .favorite {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+  }
+
+  .text-wrapper {
+    font-size: 1.25rem;
+
+    .title {
+      color: #252b42;
+    }
+
+    .subtitle {
+      color: #bdbdbd;
+    }
+  }
+
+  .cost {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+}

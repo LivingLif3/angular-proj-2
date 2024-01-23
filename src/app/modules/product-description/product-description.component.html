@@ -1,0 +1,119 @@
+<div class="content-wrapper">
+  <div class="column-wrapper">
+    <div class="content-card">
+      <div class="photo-part">
+        <nz-carousel *ngIf="currentProduct; else spin" [nzEffect]="'scrollx'">
+          <div nz-carousel-content *ngFor="let image of currentProduct.images">
+            <div
+              class="image"
+              [ngStyle]="{
+                background: 'url(' + image + ')',
+                backgroundCover: 'cover',
+                backgroundRepeat: 'no-repeat'
+              }"
+            ></div>
+          </div>
+        </nz-carousel>
+      </div>
+      <div class="info-part">
+        <ng-container *ngIf="currentProduct; else spin">
+          <div class="title">{{ currentProduct.title }}</div>
+          <div class="rating-stars">
+            <nz-rate [ngModel]="currentProduct.totalRating"></nz-rate>
+            <span class="reviews-count">{{ currentProduct.reviews.length }} Reviews</span>
+          </div>
+          <div class="cost">
+            <ng-container *ngIf="currentProduct.discount; else cost">
+              <span class="normal-cost">${{ currentProduct.discountCost }}</span>
+              <span class="discount-cost">${{ currentProduct.price }}</span>
+            </ng-container>
+            <ng-template #cost>
+              <span class="normal-cost">{{ currentProduct.price }}$</span>
+            </ng-template>
+          </div>
+          <div class="colors">
+            <div class="colors-title">Color</div>
+            <app-choose-color></app-choose-color>
+          </div>
+          <div class="add-buttons">
+            <div class="button">
+              <button nz-button nzGhost>
+                <span nz-icon nzType="heart" nzTheme="outline"></span> Add To Wishlist
+              </button>
+            </div>
+            <button nz-button nzType="primary">Add To Card</button>
+          </div>
+          <div class="description-block">
+            <div class="description-title">Product description</div>
+            <div class="description-text">
+              <app-description
+                [value]="currentProduct.description"
+                [accessSize]="119"
+              ></app-description>
+            </div>
+          </div>
+          <div class="accessory-wrapper">
+            <ng-container *ngFor="let item of accessoryItems">
+              <app-accessory-item [title]="item.title" [subTitles]="item.subTitles">
+              </app-accessory-item>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="description-wrapper">
+      <div class="sections-wrapper">
+        <div
+          class="section"
+          (click)="selectedSection = 'description'"
+          [ngClass]="{ active: selectedSection === 'description' }"
+        >
+          Description
+        </div>
+        <div
+          class="section"
+          *ngIf="currentProduct"
+          (click)="selectedSection = 'reviews'"
+          [ngClass]="{ active: selectedSection === 'reviews' }"
+        >
+          Reviews ({{ currentProduct.reviews.length }})
+        </div>
+      </div>
+      <nz-divider></nz-divider>
+      <ng-container *ngIf="currentProduct">
+        <div *ngIf="selectedSection === 'description'; else reviews">
+          <div class="description-text text-style">
+            {{ currentProduct.description }}
+          </div>
+          <div class="title-features">Product Features:</div>
+          <ul>
+            <ng-container *ngFor="let item of currentProduct.productFeatures">
+              <li class="text-style">{{ item }}</li>
+            </ng-container>
+          </ul>
+        </div>
+        <ng-template #reviews>
+          <ng-container *ngFor="let item of currentProduct.reviews">
+            <nz-comment nzAuthor="Han Solo" [ngStyle]="{ background: 'white', marginTop: '1rem' }">
+              <nz-avatar
+                nz-comment-avatar
+                nzIcon="user"
+                nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+              ></nz-avatar>
+              <nz-comment-content>
+                <p>
+                  {{ item.comment }}
+                </p>
+              </nz-comment-content>
+              <nz-comment-action>Reply to</nz-comment-action>
+            </nz-comment>
+          </ng-container>
+        </ng-template>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #spin>
+  <nz-spin nzSimple></nz-spin>
+</ng-template>

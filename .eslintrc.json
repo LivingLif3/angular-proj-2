@@ -6,7 +6,7 @@
       "files": ["*.ts"],
       "plugins": ["unused-imports", "import"],
       "parserOptions": {
-        "project": ["tsconfig.(app|spec).json"],
+        "project": ["tsconfig.(app|spec).json", "tsconfig.json"],
         "createDefaultProgram": true
       },
       "extends": [
@@ -21,6 +21,9 @@
       ],
       "rules": {
         "@typescript-eslint/lines-between-class-members": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/default-param-last": "off",
+        "@typescript-eslint/no-unused-vars": "off",
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -75,7 +78,14 @@
         "plugin:@angular-eslint/template/recommended",
         "plugin:@angular-eslint/template/accessibility"
       ],
-      "rules": {}
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "auto"
+          }
+        ]
+      }
     }
   ]
 }

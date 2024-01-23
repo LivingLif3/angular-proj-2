@@ -1,0 +1,49 @@
+.selection {
+  .title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: rgba(37, 43, 66, 1);
+  }
+
+  .items {
+    margin-top: 0.5rem;
+    .item-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 0.5rem;
+
+      .item-name {
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.75rem;
+        letter-spacing: 0.2px;
+        color: rgba(115, 115, 115, 1);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex: 1;
+        margin-left: 1rem;
+      }
+
+      .count {
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: rgba(115, 115, 115, 1);
+      }
+
+      .circle {
+        cursor: pointer;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        border: 2px solid rgba(220, 220, 220, 1);
+      }
+
+      .active {
+        border: 0.3rem solid rgba(32, 145, 249, 1);
+      }
+    }
+  }
+}

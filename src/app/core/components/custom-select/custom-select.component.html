@@ -1,0 +1,12 @@
+<div class="selection">
+  <div class="title">{{ title }}</div>
+  <div class="items">
+    <ng-container *ngFor="let item of items">
+      <div class="item-wrapper">
+        <div class="circle" [ngClass]="{ active: item === value }" (click)="chooseItem(item)"></div>
+        <div class="item-name">{{ item }}</div>
+        <div class="count">99</div>
+      </div>
+    </ng-container>
+  </div>
+</div>

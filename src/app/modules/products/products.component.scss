@@ -1,0 +1,253 @@
+.main-image {
+  width: 100%;
+  height: 25rem;
+
+  background-image: url('../../../assets/main-products.jpg');
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .text-wrapper {
+    color: white;
+
+    .text-header {
+      display: flex;
+      justify-content: center;
+
+      h3 {
+        color: inherit;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+    }
+
+    .text-body {
+      display: flex;
+      justify-content: center;
+      h1 {
+        color: inherit;
+        font-weight: bold;
+        font-size: 3.25rem;
+      }
+    }
+
+    .text-footer {
+      display: flex;
+
+      justify-content: center;
+
+      font-size: 1.25rem;
+
+      font-weight: bold;
+    }
+
+    .footer-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.content-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  background: rgba(249, 249, 249, 1);
+  display: flex;
+
+  .main-content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      padding-top: 2rem;
+      padding-left: 2rem;
+      gap: 1rem;
+    }
+
+    .main-content-inline {
+      display: flex;
+      flex-direction: column;
+      padding-left: 2rem;
+      padding-top: 2rem;
+      width: 100%;
+
+      .inline-card {
+        margin-top: 0.5rem;
+      }
+    }
+
+    .content-block {
+      height: auto;
+    }
+
+    .content-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .sort-block {
+        .sort-label {
+          font-size: 1rem;
+          line-height: 1rem;
+          color: rgba(115, 115, 115, 1);
+        }
+
+        nz-select {
+          width: 10rem;
+          margin-left: 1.5rem;
+          //padding: 1rem 1.25rem 1rem 1.25rem;
+        }
+      }
+    }
+
+    .orientation-block {
+      display: flex;
+
+      nz-radio-group {
+        display: flex;
+        label {
+          width: 3.2rem;
+          height: 3.2rem;
+          font-size: 1.5rem;
+          border-radius: 5px;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 0.5rem;
+          cursor: pointer;
+
+          &:hover {
+            color: black;
+          }
+
+          &:active {
+            border: none;
+          }
+        }
+      }
+
+      .icon-wrapper {
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+
+      .active {
+        background-color: rgba(233, 233, 233, 1);
+      }
+    }
+  }
+}
+
+.paginator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+  background-color: rgba(249, 249, 249, 1);
+}
+
+@media only screen and (max-width: 320px) {
+  .main-image {
+    background-position: -34rem 0;
+  }
+
+  .content-wrapper {
+    padding-left: 0;
+    .main-content-wrapper {
+      .content-block {
+        display: flex;
+        justify-content: center;
+      }
+
+      .orientation-block {
+        display: none;
+      }
+    }
+  }
+
+  .filter-bar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .main-image {
+    background-position: -28rem 0;
+  }
+
+  .content-wrapper {
+    .main-content-wrapper {
+      .content-block {
+        display: flex;
+        justify-content: center;
+      }
+
+      .orientation-block {
+        display: none;
+      }
+    }
+  }
+
+  .filter-bar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .main-image {
+    background-position: -20rem 0;
+  }
+
+  .filter-bar {
+    display: none;
+  }
+
+  .content-wrapper {
+    .main-content-wrapper {
+      .content-block {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .main-image {
+    background-position: -14rem 0;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .main-image {
+    background-position: -4rem 0;
+  }
+}

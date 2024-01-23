@@ -1,0 +1,21 @@
+.choose-size-wrapper {
+  display: flex;
+  align-items: center;
+
+  margin-top: 0.5rem;
+
+  .size-element {
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid #e4e4e4;
+
+    //flex: 1;
+    color: #737373;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    display: flex;
+    //flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.75rem;
+  }
+}

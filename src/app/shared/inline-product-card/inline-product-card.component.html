@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="image-block" [style.background-image]="'url(' + imageUrl + ')'">
+    <app-favorite class="inside-img"></app-favorite>
+  </div>
+  <div class="info-block">
+    <div class="top-part">
+      <div class="title-wrapper">
+        <div class="text-wrapper">
+          <span class="title">{{ title }}</span>
+          <span class="choosed-color">(BLACK)</span>
+        </div>
+        <app-favorite [color]="'#000'" class="outside-img"></app-favorite>
+      </div>
+      <div class="subtitle">{{ cost }}$</div>
+    </div>
+    <div class="bottom-part">
+      <app-choose-color></app-choose-color>
+      <app-choose-size></app-choose-size>
+    </div>
+  </div>
+</div>

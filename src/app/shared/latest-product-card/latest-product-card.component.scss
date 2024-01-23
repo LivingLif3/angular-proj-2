@@ -1,0 +1,26 @@
+.card {
+  .photo {
+    width: 15rem;
+    height: 11.25rem;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .text-wrapper {
+    .title {
+      color: #252b42;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      color: #bdbdbd;
+    }
+  }
+
+  .cost {
+    font-weight: bold;
+  }
+}
