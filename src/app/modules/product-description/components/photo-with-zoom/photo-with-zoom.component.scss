@@ -1,0 +1,20 @@
+.image {
+  width: 600px;
+  overflow: hidden;
+  img {
+    margin: auto;
+    display: block;
+    transition: opacity 0.5s;
+    width: 600px;
+    &:hover {
+      opacity: 0;
+    }
+  }
+  &-wrap {
+    background-position: 50% 50%;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+}

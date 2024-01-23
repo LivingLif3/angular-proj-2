@@ -17,9 +17,16 @@ const routes: Routes = [
       import('./modules/products/products.module').then((value) => value.ProductsModule),
   },
   {
-    path: '**',
-    redirectTo: 'home',
+    path: 'product',
+    loadChildren: () =>
+      import('./modules/product-description/product-description.module').then(
+        (value) => value.ProductDescriptionModule,
+      ),
   },
+  // {
+  //   path: '**',
+  //   redirectTo: 'home',
+  // },
 ];
 
 @NgModule({

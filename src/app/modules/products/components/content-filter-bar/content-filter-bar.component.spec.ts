@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PlusOutline } from '@ant-design/icons-angular/icons';
+import { HeartOutline, PlusOutline } from '@ant-design/icons-angular/icons';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputModule } from 'ng-zorro-antd/input';
@@ -22,7 +22,7 @@ describe('ContentFilterBarComponent', () => {
       declarations: [ContentFilterBarComponent, AccessoryItemComponent],
       imports: [
         NzInputModule,
-        NzIconModule.forRoot([PlusOutline]),
+        NzIconModule.forChild([PlusOutline, HeartOutline]),
         CustomSelectComponent,
         NzSliderModule,
         NzCheckboxModule,

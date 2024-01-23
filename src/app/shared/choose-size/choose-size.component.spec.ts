@@ -11,7 +11,7 @@ describe('ChooseSizeComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ChooseSizeComponent],
-      imports: [NzIconModule.forRoot([HeartOutline])],
+      imports: [NzIconModule.forChild([HeartOutline])],
     });
     fixture = TestBed.createComponent(ChooseSizeComponent);
     component = fixture.componentInstance;

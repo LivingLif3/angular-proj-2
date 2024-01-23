@@ -1,0 +1,8 @@
+<span
+  >{{ value | textSize: accessSize : show }}
+  <span *ngIf="!show"
+    >...<span [ngStyle]="{ color: '#2091F9' }" class="full" (click)="show = !show">
+      See Full Description</span
+    >
+  </span>
+</span>

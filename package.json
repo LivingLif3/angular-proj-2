@@ -14,7 +14,7 @@
     "*.{js,ts}": [
       "npm run lint -- --fix"
     ],
-    "*.{scss,html,css,less,sass}": "prettier --write"
+    "*.{scss,html,css,less,sass}": "prettier . --write"
   },
   "private": true,
   "dependencies": {

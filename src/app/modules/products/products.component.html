@@ -49,6 +49,7 @@
               [title]="product['title']"
               [cost]="product['price']"
               [imageUrl]="product['images'][0]"
+              routerLink="../product/{{ product['id'] }}"
               class="small-card"
             >
             </app-latest-product-card>
@@ -62,6 +63,7 @@
               [title]="product['title']"
               [cost]="product['price']"
               [imageUrl]="product['images'][0]"
+              routerLink="../product/{{ product['id'] }}"
               class="inline-card"
             >
             </app-inline-product-card>

@@ -21,7 +21,7 @@ describe('FeaturedProductCardComponent', () => {
         ChooseSizeComponent,
         FavoriteComponent,
       ],
-      imports: [SharedModule, NzIconModule.forRoot([HeartOutline])],
+      imports: [SharedModule, NzIconModule.forChild([HeartOutline])],
     });
     fixture = TestBed.createComponent(FeaturedProductCardComponent);
     component = fixture.componentInstance;

@@ -42,5 +42,6 @@ const routes: Routes = [
     NzPaginationModule,
     SharedModule,
   ],
+  exports: [AccessoryItemComponent],
 })
 export class ProductsModule {}

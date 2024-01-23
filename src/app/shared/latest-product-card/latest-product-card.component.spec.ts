@@ -14,7 +14,7 @@ describe('LatestProductCardComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [LatestProductCardComponent, FavoriteComponent, ChooseSizeComponent],
-      imports: [NzIconModule.forRoot([HeartOutline])],
+      imports: [NzIconModule.forChild([HeartOutline])],
     });
     fixture = TestBed.createComponent(LatestProductCardComponent);
     component = fixture.componentInstance;

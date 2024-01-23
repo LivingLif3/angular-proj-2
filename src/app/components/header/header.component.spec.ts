@@ -27,7 +27,7 @@ describe('HeaderComponent', () => {
         NzBadgeModule,
         NzModalModule,
         TranslateModule.forRoot(),
-        NzIconModule.forRoot([HeartOutline, UserOutline, ShoppingCartOutline, MenuOutline]),
+        NzIconModule.forChild([HeartOutline, UserOutline, ShoppingCartOutline, MenuOutline]),
       ],
       providers: [LanguageService, TranslateService],
     });

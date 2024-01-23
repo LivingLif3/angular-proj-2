@@ -101,6 +101,9 @@ export class ProductsComponent implements OnInit {
       ?.valueChanges.subscribe((value: 'popularity' | 'cost') => {
         this.currentProducts.sort(this.sortFunctions[value]);
       });
+    this.products$.subscribe((product) => {
+      console.log(product);
+    });
   }
 
   compareFunctionForPopularity(a: IProduct, b: IProduct) {
