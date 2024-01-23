@@ -1,13 +1,1 @@
-<div class="accessory">
-  <div class="title-wrapper">
-    <div class="title">{{ title }}</div>
-    <div class="plus-button" [ngClass]="{ active }" (click)="toggleActive()">
-      <span nz-icon nzType="plus" nzTheme="outline"></span>
-    </div>
-  </div>
-  <div class="sub-titles" [@unfolding]="active">
-    <ng-container *ngFor="let subTitle of subTitles">
-      <div class="sub-title">{{ subTitle }}</div>
-    </ng-container>
-  </div>
-</div>
+<div class="accessory">  <div class="title-wrapper">    <div class="title">{{ title }}</div>    <div class="plus-button" [ngClass]="{ active }" (click)="toggleActive()">      <span nz-icon nzType="plus" nzTheme="outline"></span>    </div>  </div>  <div class="sub-titles" [@unfolding]="active">    <ng-container *ngFor="let subTitle of subTitles">      <div class="sub-title">{{ subTitle }}</div>    </ng-container>  </div></div>

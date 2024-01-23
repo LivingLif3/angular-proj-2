@@ -1,52 +1,1 @@
-.accessory {
-  margin-top: 1rem;
-
-  .title-wrapper {
-    display: flex;
-    justify-content: space-between;
-    .title {
-      line-height: 1.5rem;
-      font-weight: 600;
-      font-size: 1rem;
-      color: rgba(37, 43, 66, 1);
-    }
-    .plus-button {
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 1.5rem;
-      height: 1.5rem;
-      border-radius: 50%;
-
-      background: rgba(241, 241, 241, 1);
-      [nz-icon] {
-        font-size: 0.75rem;
-        color: rgba(189, 189, 189, 1);
-      }
-    }
-
-    .active {
-      background: rgba(32, 145, 249, 1);
-      [nz-icon] {
-        font-size: 0.75rem;
-        color: #ffffff;
-      }
-    }
-  }
-
-  .sub-titles {
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    border-bottom: 1px solid rgba(228, 228, 228, 1);
-    padding-bottom: 0.5rem;
-
-    .sub-title {
-      line-height: 1.75rem;
-      font-weight: 700;
-      font-size: 0.875rem;
-      color: rgba(115, 115, 115, 1);
-      letter-spacing: 0.2px;
-    }
-  }
-}
+.accessory {  margin-top: 1rem;  .title-wrapper {    display: flex;    justify-content: space-between;    .title {      line-height: 1.5rem;      font-weight: 600;      font-size: 1rem;      color: rgba(37, 43, 66, 1);    }    .plus-button {      cursor: pointer;      display: flex;      justify-content: center;      align-items: center;      width: 1.5rem;      height: 1.5rem;      border-radius: 50%;      background: rgba(241, 241, 241, 1);      [nz-icon] {        font-size: 0.75rem;        color: rgba(189, 189, 189, 1);      }    }    .active {      background: rgba(32, 145, 249, 1);      [nz-icon] {        font-size: 0.75rem;        color: #ffffff;      }    }  }  .sub-titles {    margin-top: 0.5rem;    margin-left: 0.5rem;    border-bottom: 1px solid rgba(228, 228, 228, 1);    padding-bottom: 0.5rem;    .sub-title {      line-height: 1.75rem;      font-weight: 700;      font-size: 0.875rem;      color: rgba(115, 115, 115, 1);      letter-spacing: 0.2px;    }  }}
